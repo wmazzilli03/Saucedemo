@@ -40,3 +40,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignorar reportes de Serenity
+target/
+# Ignorar solo los reportes de serenity
+target/site/serenity/

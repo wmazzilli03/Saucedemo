@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.type.Type;
 
 import static co.com.walberto.ui.Login.*;
+import static co.com.walberto.ui.Produtcs.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Ingresar implements Task {
@@ -27,6 +28,8 @@ public class Ingresar implements Task {
                 Type.theValue(password).into(INPUT_PASSWORD),
                 Click.on(BTN_LOGIN)
         );
+        String tituloPagiProductos = TITLE_PRODUCTS.resolveFor(actor).getText();
+        actor.remember("tituloPagina",tituloPagiProductos);
 
     }
 
