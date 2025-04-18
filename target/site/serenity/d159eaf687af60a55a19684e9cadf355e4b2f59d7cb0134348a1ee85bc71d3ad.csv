@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Inicio de sesión","Login exitoso con usuario válido","PENDING","2025-04-18T10:19:32.2573905-05:00[America/Bogota]","0.0","0.05"
+"Inicio de sesión","Login fallido con usuario bloqueado","PENDING","2025-04-18T10:19:32.3587108-05:00[America/Bogota]","0.0","0.06"
