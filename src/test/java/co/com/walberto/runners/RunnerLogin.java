@@ -7,14 +7,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/login.feature",      // Ruta a tus archivos .feature
+        features = "src/test/resources/features/SeleProducto.feature",      // Ruta a tus archivos .feature
         glue = "co.com.walberto.stepdefinitions",            // Paquete donde están tus step definitions
         plugin = {"pretty", "json:target/cucumber-reports/cucumber.json"},
-        snippets = CucumberOptions.SnippetType.CAMELCASE
-        // tags = {"@regression"}                           // Opcional: filtra los escenarios según el tag
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        stepNotifications = true
+       // tags = "@regression"                           // Opcional: filtra los escenarios según el tag
 )
-
-
 
 public class RunnerLogin {
 }
