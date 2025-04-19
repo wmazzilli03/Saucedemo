@@ -29,7 +29,4 @@ public class AgregarProducto implements Task {
     public static Performable alCarritoCompra(String producto) {
             return instrumented(AgregarProducto.class,producto);
     }
-
-
-
 }

@@ -6,7 +6,7 @@ Feature: Selección de productos en la tienda
 
 
   Scenario Outline: Seleccionar un solo producto
-    When el usurious agrega el producto "<nombre_producto>" al carrito al azar
+    When el usuario agrega el producto "<nombre_producto>" al carrito al azar
     Then en el carrito de compra debería tener al menos 1 productos agregados
     Examples:
       | nombre_producto       |
