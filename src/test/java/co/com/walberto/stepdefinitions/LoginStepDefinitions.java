@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import co.com.walberto.hook.Abrir;
 import co.com.walberto.tasks.Ingresar;
-import co.com.walberto.questions.TituloDeProducto;
+import co.com.walberto.questions.*;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
@@ -37,8 +37,10 @@ public class LoginStepDefinitions {
     }
 
     @Then("debería ver el mensaje de error {string}")
-    public void deberíaVerElMensajeDeError(String string) {
-
+    public void deberíaVerElMensajeDeError(String msj) {
+        OnStage.theActorInTheSpotlight().should(seeThat(
+                Credenciales.noSonCorrectas(msj)
+        ));
     }
 
 }
