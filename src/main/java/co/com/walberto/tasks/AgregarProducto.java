@@ -8,13 +8,7 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
 
 import static co.com.walberto.ui.Productos.BTN_ADD_CART;
 import static co.com.walberto.ui.Productos.ICONO_CARRITO_COMPRA;
@@ -29,8 +23,8 @@ public class AgregarProducto implements Task {
     public AgregarProducto(String producto, int number) {
         this.producto = producto;
         this.number = number;
-        // this.producto = productoAzar;
     }
+
     public AgregarProducto(int number){
         this.number = number;
     }

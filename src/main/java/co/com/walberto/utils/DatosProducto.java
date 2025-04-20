@@ -26,10 +26,6 @@ public class DatosProducto {
     }
 
     public static String obtenerProductoAleatorio() {
-        System.out.println("Producto al azar: " + PRODUCTOS.get(new Random().nextInt(PRODUCTOS.size())));
-        for (int i = 0 ; i < PRODUCTOS.size() ;i++ ){
-            System.out.println("Productos individuales" + PRODUCTOS.get(i));
-        }
         return PRODUCTOS.get(new Random().nextInt(PRODUCTOS.size()));
     }
 
@@ -38,9 +34,8 @@ public class DatosProducto {
         Collections.shuffle(productosDesordenados);
         int number = obtenerNumeroRandomDel1Al6();
         for (int i = 0 ; i < number ;i++ ){
-            System.out.println("Productos individuales 2" + productosDesordenados.get(i));
             actor.attemptsTo(
-                    Click.on(Productos.botonAgregarProductoAlAzar(productosDesordenados.get(i)))
+              Click.on(Productos.botonAgregarProductoAlAzar(productosDesordenados.get(i)))
             );
         }
         }

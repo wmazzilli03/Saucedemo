@@ -32,7 +32,6 @@ public class SeleProductoSteps {
     @And("el usuario agrega mas de un producto en el carrito de compra")
     public void elUsuarioAgregaMasDeUnProductoEnElCarritoDeCompra() {
         OnStage.theActorInTheSpotlight().attemptsTo(
-               // AgregarMasDeUnProducto.aleatoriamente()
                 AgregarProducto.aleatoriamente()
         );
     }
