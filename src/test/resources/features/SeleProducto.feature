@@ -13,11 +13,11 @@ Feature: Selección de productos en la tienda
       | Sauce Labs Backpack   |
       | Sauce Labs Bike Light |
 
- # Scenario: Seleccionar un producto aleatorio
-  #  And el usuario agrega un producto al carrito al azar
-   # Then en el carrito de compra debería tener al menos 1 producto agregado
+  Scenario: Seleccionar un producto aleatorio
+    And el usuario agrega un producto al carrito al azar
+    Then en el carrito de compra debería tener al menos 1 productos agregados
 
-
-  #Scenario: Seleccionar mas de un producto al carrito de compra
-   # And el usuario agrega mas de un producto en el carrito de compra
-    #Then en el carrito de compra debería tener al menos 1 productos agregados
+  @regression
+  Scenario: Seleccionar mas de un producto al carrito de compra
+    And el usuario agrega mas de un producto en el carrito de compra
+    Then en el carrito de compra debería tener al menos 1 productos agregados

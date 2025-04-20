@@ -29,7 +29,6 @@ public class Ingresar implements Task {
         );
         String tituloPagiProductos = TITLE_PRODUCTS.resolveFor(actor).getText();
         actor.remember("tituloPagina",tituloPagiProductos);
-
     }
 
     public static Performable misCredenciales(String usuario, String password) {
