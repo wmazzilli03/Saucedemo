@@ -8,6 +8,7 @@ Feature: Proceso de compra
     And el producto debería estar visible en el carrito
 
 
+
   Scenario Outline: Completar la compra de un producto
     When completo el formulario con los siguientes datos:<nombre>,<apellido>,<codigoPostal>
     Then debería ver el mensaje "Checkout: Overview"

@@ -19,4 +19,5 @@ public class Checkout extends Object {
             located(By.id("continue"));
 
 
+
 }

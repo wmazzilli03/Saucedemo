@@ -27,6 +27,7 @@ public class CheckoutStep {
                 VistaCheckout.llenarFomularioPorUnMap(datosCheckOut)
         );
     }
+
     @Then("debería ver el mensaje {string}")
     public void deberíaVerElMensaje(String nombreVista) {
         OnStage.theActorInTheSpotlight().should(seeThat(
