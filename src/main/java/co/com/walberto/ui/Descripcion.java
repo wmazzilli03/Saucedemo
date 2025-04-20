@@ -11,4 +11,7 @@ public class Descripcion extends Object{
     public static final Target TXT_CHECKOUT = Target.the("Subtitlo para validar que estoy en el formulario de saucedemo").
             located(By.xpath("//span[text()='Checkout: Your Information']"));
 
+    public static final Target TXT_CHECKOUT_OVERVIEW = Target.the("Vista overView ").
+            located(By.xpath("//span[text()='Checkout: Overview']"));
+
 }

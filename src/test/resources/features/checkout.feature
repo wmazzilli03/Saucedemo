@@ -7,17 +7,18 @@ Feature: Proceso de compra
     And en el carrito de compra debería tener al menos 1 productos agregados
     And el producto debería estar visible en el carrito
 
-  @outlineCheck
+
   Scenario Outline: Completar la compra de un producto
-    And completa el formulario con nombre  <nombre>, apellido  <apellido> y código postal <codigoPostal>  y continuamos a la siguiente vista
+    When completo el formulario con los siguientes datos:<nombre>,<apellido>,<codigoPostal>
     Then debería ver el mensaje "Checkout: Overview"
     Examples:
-      | nombre    | apellido | codigoPostal |
-      | Walberto  | Mazzilli | 032311       |
+      | nombre     | apellido   | codigoPostal |
+      | "Walberto" | "Mazzilli" | "032311"     |
 
 
+  @outlineCheck
   Scenario: Completar la compra de un producto
     When completo el formulario con los siguientes datos:
-      | nombre  | apellido | codigoPostal |
-      | Alberto | Mazzilli | 032311       |
+      | nombre | apellido | codigoPostal |
+      | Anya   | Colina   | 032311       |
     Then debería ver el mensaje "Checkout: Overview"

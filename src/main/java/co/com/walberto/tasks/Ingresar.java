@@ -1,5 +1,6 @@
 package co.com.walberto.tasks;
 
+import co.com.walberto.utils.Times;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -9,6 +10,7 @@ import net.serenitybdd.screenplay.actions.type.Type;
 
 import static co.com.walberto.ui.Login.*;
 import static co.com.walberto.ui.Productos.*;
+import static co.com.walberto.utils.Constantes.TIME_SHORT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Ingresar implements Task {
@@ -29,6 +31,7 @@ public class Ingresar implements Task {
         );
         String tituloPagiProductos = TITLE_PRODUCTS.resolveFor(actor).getText();
         actor.remember("tituloPagina",tituloPagiProductos);
+        Times.waiting(TIME_SHORT);
     }
 
     public static Performable misCredenciales(String usuario, String password) {
