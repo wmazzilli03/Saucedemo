@@ -3,11 +3,21 @@ Feature: Proceso de compra
   Background:
     Given que el usuario abre la aplicación
     When inicia sesión con el usuario "standard_user" y contraseña "secret_sauce"
+    And el usuario agrega mas de un producto en el carrito de compra
+    And en el carrito de compra debería tener al menos 1 productos agregados
+    And el producto debería estar visible en el carrito
+
+  @outlineCheck
+  Scenario Outline: Completar la compra de un producto
+    And completa el formulario con nombre  <nombre>, apellido  <apellido> y código postal <codigoPostal>  y continuamos a la siguiente vista
+    Then debería ver el mensaje "Checkout: Overview"
+    Examples:
+      | nombre    | apellido | codigoPostal |
+      | Walberto  | Mazzilli | 032311       |
 
 
   Scenario: Completar la compra de un producto
-    And agrega el producto un producto al carrito de compra
-    And inicia el proceso de compra
-    And completa el formulario con nombre "Walberto", apellido "Mazzilli" y código postal "11001"
-    And finalizar la compra
-    Then debería ver el mensaje "Thank you for your order!"
+    When completo el formulario con los siguientes datos:
+      | nombre  | apellido | codigoPostal |
+      | Alberto | Mazzilli | 032311       |
+    Then debería ver el mensaje "Checkout: Overview"
